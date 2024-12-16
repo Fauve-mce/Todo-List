@@ -94,6 +94,7 @@ const toggleEditMode = (id) => {
 return (
   <div className="todo-app">
     <h1>Todo List</h1>
+    <TodoForm handleAdd={handleAdd} />
     <ul className="todo-list">
       {todos.map((todo) => (
         <Todo 
@@ -105,7 +106,7 @@ return (
         />
       ))}
     </ul>
-    <TodoForm handleAdd={handleAdd} />
+    
   </div>
 );
 

@@ -2,7 +2,7 @@
 $primary-color: #61dafb;
 $secondary-color: #282c34;
 $text-color: #ffffff;
-$bg-color: #f9f9f9;
+$bg-color: #7e6161;
 
 // Styles de base
 body {
@@ -11,10 +11,18 @@ body {
   margin: 0;
   padding: 0;
   color: $text-color;
+
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;            
 }
 
 // Container principal
 .todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   padding: 2rem;
   max-width: 600px;
@@ -58,9 +66,9 @@ body {
   background: #ff5c5c;
   border: none;
   color: $text-color;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
+  border-radius: 5%;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
@@ -74,25 +82,25 @@ body {
 // Formulaire
 .todo-form {
   margin-top: 1rem;
+  display: flex; 
 }
 
-.todo-form input {
+input {
   padding: 0.5rem;
   width: 70%;
   border: 1px solid $primary-color;
   border-radius: 5px;
 }
 
-.todo-form button {
+button {
   padding: 0.5rem;
   background: $primary-color;
   border: none;
   color: $secondary-color;
-  border-radius: 5px;
+  border-radius: 0px;
   cursor: pointer;
   margin-left: 0.5rem;
 }
-
-.todo-form button:hover {
+button:hover {
   background: darken($primary-color, 10%);
 }

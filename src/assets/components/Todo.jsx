@@ -33,7 +33,7 @@ export default function Todo({
           ) : (
             <span onClick={() => toggleEditMode(todoInfo.id)}>{todoInfo.nom}</span>
           )}
-          <button onClick={() => onTodoDelete(todoInfo.id)}>X</button>
+          <button onClick={() => onTodoDelete(todoInfo.id)}>✖️</button>
         </li>
       );
       
