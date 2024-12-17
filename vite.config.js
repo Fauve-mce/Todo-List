@@ -5,12 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: { 
-    input: './src/main.jsx', 
-    output: { 
-      file: 'bundle.js', 
-      format: 'es' 
-    } 
-  } 
-}
+    rollupOptions: {
+      input: './src/main.jsx',  // Ton fichier principal
+      output: {
+        dir: 'dist',  // Répertoire de sortie
+        entryFileNames: 'bundle.js',  // Nom du fichier JS généré
+        format: 'es',  // Format du fichier JS (ES Module)
+      },
+    },
+  },
 });
