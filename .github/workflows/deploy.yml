@@ -41,4 +41,4 @@ jobs:
           # Le dossier contenant les fichiers générés
           folder: dist  # Remplace par "_site" si tu utilises Jekyll ou autre
           # Le token GitHub pour autoriser le déploiement
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TODOLIST_TOKEN}}
