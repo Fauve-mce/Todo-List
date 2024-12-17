@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Déploie uniquement quand tu pushes sur la branche `main`
+  workflow_dispatch:  # Permet de déclencher manuellement le workflow
+
+permissions:
+  contents: read  # Permet à GitHub Actions d'accéder au contenu du repo
+  pages: write    # Permet de déployer sur GitHub Pages
+  id-token: write  # Nécessaire pour certaines configurations
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout du code source
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Installer Node.js (nécessaire pour un projet React ou Vite)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Choisir la version Node.js que tu utilises
+
+      # Installer les dépendances du projet
+      - name: Install dependencies
+        run: npm install
+
+      # Construire le projet (exécute "npm run build" pour Vite)
+      - name: Build the project
+        run: npm run build
+
+      # Déployer sur GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          # Le dossier contenant les fichiers générés
+          folder: dist  # Remplace par "_site" si tu utilises Jekyll ou autre
+          # Le token GitHub pour autoriser le déploiement
+          github_token: ${{ secrets.TODOLIST_TOKEN}}

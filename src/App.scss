@@ -1,0 +1,106 @@
+// Variables pour les couleurs
+$primary-color: #61dafb;
+$secondary-color: #282c34;
+$text-color: #ffffff;
+$bg-color: #7e6161;
+
+// Styles de base
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 100vh;            
+}
+
+// Container principal
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background: $secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+// Titre
+.todo-app h1 {
+  font-size: 2rem;
+  color: $primary-color;
+}
+
+// Liste de tâches
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $primary-color;
+  color: $secondary-color;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.todo-list li:hover {
+  transform: scale(1.02);
+}
+
+// Bouton supprimer
+.todo-list li button {
+  background: #ff5c5c;
+  border: none;
+  color: $text-color;
+  border-radius: 5%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+}
+
+.todo-list li button:hover {
+  background: #ff2c2c;
+}
+
+// Formulaire
+.todo-form {
+  margin-top: 1rem;
+  display: flex; 
+}
+
+.todo-form input {
+  padding: 0.5rem;
+  width: 70%;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+}
+
+.todo-form button {
+  padding: 0.5rem;
+  background: $primary-color;
+  border: none;
+  color: $secondary-color;
+  border-radius: 0px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.todo-form button:hover {
+  background: darken($primary-color, 10%);
+}
