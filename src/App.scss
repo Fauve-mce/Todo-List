@@ -85,14 +85,14 @@ body {
   display: flex; 
 }
 
-input {
+.todo-form input {
   padding: 0.5rem;
   width: 70%;
   border: 1px solid $primary-color;
   border-radius: 5px;
 }
 
-button {
+.todo-form button {
   padding: 0.5rem;
   background: $primary-color;
   border: none;
@@ -101,6 +101,6 @@ button {
   cursor: pointer;
   margin-left: 0.5rem;
 }
-button:hover {
+.todo-form button:hover {
   background: darken($primary-color, 10%);
 }

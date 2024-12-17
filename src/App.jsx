@@ -1,10 +1,22 @@
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.scss'
-import Todo from './assets/components/Todo'
-import TodoForm from './assets/components/TodoForm'
+import Todo from './assets/components/Todo';
+import TodoForm from './assets/components/TodoForm';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter basename="/">  
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
 
 
 const API_URL = 'http://localhost:5000/todos';
